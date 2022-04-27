@@ -1,8 +1,10 @@
 [PATCH] Support Python 2
 
-Changes for Python 2 compatibility
+Changes for Python 2 compatibility.
 
-Upstream-Status: Denied
+Inappropriate for submission due to EOL.
+
+Upstream-Status: Inappropriate [other]
 Signed-off-by: offa
 
 ---
