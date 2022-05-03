@@ -1,0 +1,33 @@
+[PATCH] Support Python 2
+
+Changes for Python 2 compatibility.
+
+Inappropriate for submission due to EOL.
+
+Upstream-Status: Inappropriate [other]
+Signed-off-by: mago0211
+
+---
+diff --git a/pytest_jsonreport/plugin.py b/pytest_jsonreport/plugin.py
+--- a/pytest_jsonreport/plugin.py
++++ b/pytest_jsonreport/plugin.py
+@@ -271,7 +271,7 @@ class JSONReport(JSONReportBase):
+                 import errno  # pylint: disable=import-outside-toplevel
+                 if e.errno != errno.EEXIST:
+                     raise
+-        with open(path, 'w', encoding='utf-8') as f:
++        with open(path, 'w') as f:
+             json.dump(
+                 self.report,
+                 f,
+@@ -311,7 +311,7 @@ class JSONReportWorker(JSONReportBase):
+ class LoggingHandler(logging.Handler):
+ 
+     def __init__(self):
+-        super().__init__()
++        super(LoggingHandler, self).__init__()
+         self.records = []
+ 
+     def emit(self, record):
+-- 
+

@@ -4,9 +4,8 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=5d425c8f3157dbf212db2ec53d9e5132"
 
 SRC_URI = "\
     git://github.com/pytest-dev/pytest-metadata.git;protocol=https;nobranch=1 \
-    file://python2.patch \
 "
-SRCREV = "6216274eb9b74c23398f49f6bc4b7677542fb5e0"
+SRCREV = "a538cdee37b3f411d3fd865adfc60a8cb9b6033a"
 
 S = "${WORKDIR}/git"
 
