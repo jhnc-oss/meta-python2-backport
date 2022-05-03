@@ -2,6 +2,8 @@ require ${PN}.inc
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=5d425c8f3157dbf212db2ec53d9e5132"
 
+DEPENDS += "pyhon-setuptools-scm-native"
+
 SRC_URI = "\
     git://github.com/pytest-dev/pytest-metadata.git;protocol=https;nobranch=1 \
 "
@@ -12,7 +14,6 @@ S = "${WORKDIR}/git"
 inherit setuptools
 PYPI_SOURCE_URI = "${SRC_URI}"
 
-RDEPENDS:${PN} += "\
-    python-pytest \
-"
+RDEPENDS:${PN} += "python-pytest"
+
 BBCLASSEXTEND = "native nativesdk"
