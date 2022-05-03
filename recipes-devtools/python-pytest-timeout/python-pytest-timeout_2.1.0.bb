@@ -6,7 +6,7 @@ SRC_URI = "\
     git://github.com/pytest-dev/pytest-timeout.git;protocol=https;nobranch=1 \
     file://python2.patch \
 "
-SRCREV = "8e4800ecbcf149790bb8035ec37dc30f3d48a127"
+SRCREV = "ad28d098ed788b29c404c45701cb670873066d6c"
 
 S = "${WORKDIR}/git"
 
