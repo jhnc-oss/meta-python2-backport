@@ -11,7 +11,6 @@ SRCREV = "c6f0bc93a174770e04b965e459d339a880005e78"
 S = "${WORKDIR}/git"
 
 inherit setuptools
-PYPI_SOURCE_URI = "${SRC_URI}"
 
 RDEPENDS:${PN} += "\
     python-pytest \
