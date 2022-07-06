@@ -1,0 +1,34 @@
+[PATCH] Remove setuptools_scm
+
+Remove setuptools_scm and use fixed version
+
+
+Inappropriate for submission due to EOL.
+
+Upstream-Status: Inappropriate [other]
+Signed-off-by: offa
+
+---
+diff --git a/setup.py b/setup.py
+index 862b2b1..855d01a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -2,7 +2,7 @@ from setuptools import setup
+ 
+ setup(
+     name="pytest-metadata",
+-    use_scm_version=True,
++    version="1.11.0",
+     description="pytest plugin for test session metadata",
+     long_description=open("README.rst").read(),
+     author="Dave Hunt",
+@@ -10,7 +10,6 @@ setup(
+     url="https://github.com/pytest-dev/pytest-metadata",
+     packages=["pytest_metadata", "pytest_metadata.ci"],
+     entry_points={"pytest11": ["metadata = pytest_metadata.plugin"]},
+-    setup_requires=["setuptools_scm"],
+     install_requires=["pytest>=2.9.0"],
+     license="Mozilla Public License 2.0 (MPL 2.0)",
+     keywords="py.test pytest metadata",
+-- 
+
