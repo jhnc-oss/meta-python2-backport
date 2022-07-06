@@ -2,6 +2,9 @@
 
 Remove setuptools_scm and use fixed version
 
+setuptools_scm fails to determine the package
+version in some situations (eg. pre-mirrors).
+
 
 Inappropriate for submission due to EOL.
 
