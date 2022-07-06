@@ -1,2 +1,1 @@
-# oelint-adv #305: Broken Upstream Status reports
-oelint-adv==3.13.0
+oelint-adv
