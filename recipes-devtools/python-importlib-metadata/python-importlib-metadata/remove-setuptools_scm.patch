@@ -1,0 +1,54 @@
+[PATCH] Remove setuptools_scm
+
+Remove setuptools_scm and use fixed version
+
+
+Inappropriate for submission due to EOL.
+
+Upstream-Status: Inappropriate [other]
+Signed-off-by: offa
+
+---
+diff --git a/pyproject.toml b/pyproject.toml
+index e5c3a6a..487e88f 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -1,2 +1,2 @@
+ [build-system]
+-requires = ["setuptools>=30.3", "wheel", "setuptools_scm"]
++requires = ["setuptools>=30.3", "wheel"]
+diff --git a/setup.cfg b/setup.cfg
+index fa10c8d..b10dbc7 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -16,7 +16,6 @@ classifiers =
+ 
+ [options]
+ python_requires = >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+-setup_requires = setuptools-scm
+ install_requires =
+     zipp>=0.5
+     pathlib2; python_version < '3'
+diff --git a/setup.py b/setup.py
+index d5d43d7..e838300 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,3 +1,3 @@
+ from setuptools import setup
+ 
+-setup(use_scm_version=True)
++setup(version="2.1.3")
+diff --git a/tox.ini b/tox.ini
+index 1f0e975..09d732b 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -75,7 +75,6 @@ deps =
+     wheel
+     setuptools
+     keyring
+-    setuptools_scm
+ passenv =
+     TWINE_PASSWORD
+ setenv =
+-- 
+
