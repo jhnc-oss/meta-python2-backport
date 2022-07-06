@@ -2,9 +2,10 @@ require ${PN}.inc
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=e88ae122f3925d8bde8319060f2ddb8e"
 
-DEPENDS += "python-setuptools-scm-native"
-
-SRC_URI = "git://github.com/python/importlib_metadata.git;protocol=https;nobranch=1"
+SRC_URI = "\
+    git://github.com/python/importlib_metadata.git;protocol=https;nobranch=1 \
+    file://remove-setuptools_scm.patch \
+"
 SRCREV = "611dd521b03b0b24628ae247107e8fb86c3c3919"
 
 S = "${WORKDIR}/git"
